@@ -85,7 +85,8 @@
     const maintenanceTimerEl = document.getElementById("maintenanceTimer");
     const maintenanceStart = new Date("1737619402839").getTime();
 
-    function updateMaintenanceTimer(seconds) {
+    function updateMaintenanceTimer() {
+        let seconds = Math.floor((Date.now() - maintenanceStart) / 1000);
         const units = [
             { label: 'Y', value: 31536000 },
             { label: 'D', value: 86400 },
